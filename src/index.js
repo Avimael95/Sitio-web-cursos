@@ -7,6 +7,7 @@ import './static/cart.svg';
 import './static/css.png';
 import './static/estrellas.png';
 import './static/git.jpg';
+import './static/go.png';
 import './static/hero.jpg';
 import './static/html.png';
 import './static/icono1.png';

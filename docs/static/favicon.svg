@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 32 32">
+  <defs>
+    <clipPath id="clip-Favicon">
+      <rect width="32" height="32"/>
+    </clipPath>
+  </defs>
+  <g id="Favicon" clip-path="url(#clip-Favicon)">
+    <circle id="Elipse_1" data-name="Elipse 1" cx="16" cy="16" r="16" fill="#ff3d00"/>
+    <text id="_" data-name="{;}" transform="translate(4 24)" fill="#fff" font-size="26" font-family="Roboto-Bold, Roboto" font-weight="700"><tspan x="0" y="0">{;}</tspan></text>
+  </g>
+</svg>
