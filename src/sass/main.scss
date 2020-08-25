@@ -163,6 +163,7 @@ body{
   .curso{
     border: 1px solid $gris;
     border-radius: 8px;
+    width: 276px;
     &:hover{
       box-shadow: 6px 6px 14px 0 rgba(0, 0, 0, 0.2),
       6px 6px 14px 0 rgba(255, 255, 255, 0.2);
@@ -173,6 +174,7 @@ body{
     }
     flex: 0 1 calc(50%-1rem);
     margin-bottom: 1rem;
+
     @include tablet{
       .imagen-curso{
         width: 400px;
