@@ -1,7 +1,7 @@
 
 // require('./styles/main.scss');
 //otra forma de cargar los archivos
-import './styles/main.scss';
+import './sass/main.scss';
 import './static/logo.png';
 import './static/cart.svg';
 import './static/css.png';

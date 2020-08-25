@@ -20,12 +20,17 @@ body{
   font-family: $fuente_principal;
 }
 .contenedor{
-    max-width: 1100px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
 .oculto{
     display: none;
+}
+
+/*Agregamos el estilo para la clase centrado*/
+.centrado{
+  text-align: center;
 }
 /*Estilos para el header*/
 .header{
@@ -54,7 +59,6 @@ body{
     padding: 1rem;
     max-width: 400px;
     border-radius: .3rem;
-    @include box-shadow();
   }
   img{
     max-width: 150px;
@@ -65,9 +69,9 @@ body{
 }
 
 .hero{
-    @include background-image('../static/hero.jpg');
+    @include background-image('./../static/hero.jpg');
     background-size: cover;
-    min-height: 24rem;
+    min-height: 30rem;
     color: $blanco;
     display: flex;
     justify-content: center;
@@ -86,24 +90,21 @@ body{
      form{
         position: relative;
         width: 100%;
-
         @include tablet(){
           width: 40%;
         }
-
-        input[type="submit"]{
+      input[type="submit"]{
         position: absolute;
         right: 0;
         top: 0;
-        @include background-image('../static/lupa.png');
+        @include background-image('./../static/lupa.png');
         width: 3rem;
         height: 3rem;
         text-indent: -9999px;
         border: none;
         cursor: pointer;
       }
-
-       input[type="text"]{
+      input[type="search"]{
         width: 100%;
         height: 3rem;
        }
@@ -127,7 +128,6 @@ body{
     @include desktop(){
       flex-direction: row;
     }
-
     .icono{
       padding: 1rem;
       flex: 1;
@@ -143,16 +143,104 @@ body{
       
     }
     .icono1{
-      @include background-image('../static/icono1.png');
+      @include background-image('./../static/icono1.png');
     }
     .icono2{
-      @include background-image('../static/icono2.png');
+      @include background-image('./../static/icono2.png');
     }
     .icono3{
-      @include background-image('../static/icono3.png');
+      @include background-image('./../static/icono3.png');
     }
-   
-  
   }
 }
 
+/*Agregamos estilos para la seccion de cursos*/
+.cursos{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-content: center;
+  .curso{
+    border: 1px solid $gris;
+    border-radius: 8px;
+    &:hover{
+      box-shadow: 6px 6px 14px 0 rgba(0, 0, 0, 0.2),
+      6px 6px 14px 0 rgba(255, 255, 255, 0.2);
+    }
+    .imagen-curso{
+      border-radius: 8px 8px 0px 0px;
+      width: 100%
+    }
+    flex: 0 1 calc(50%-1rem);
+    margin-bottom: 1rem;
+    @include tablet{
+      .imagen-curso{
+        width: 400px;
+      }
+      flex: 0 1 calc(33.3%-1rem);
+    }
+    @include desktop{
+      .imagen-curso{
+        width: 276px;
+      }
+      flex: 0 1 calc(25%-1rem);
+
+    }
+ 
+  }
+}
+
+.info-curso{
+  padding: 1rem;
+  h4{
+    font-size: 1.2rem;
+    margin-bottom: 0.3rem;
+  }
+  p{
+    margin-bottom: 0.3rem;
+  }
+  .precio{
+    margin-top: 0.3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: $colorTexto;
+    .regular{
+      text-decoration: line-through;
+    }
+    .oferta{
+      font-size: 1.6rem;
+      font-weight: 600;
+    }
+  }
+  .boton{
+    @include boton($principal);
+  }
+}
+
+.footer{
+  border-top: 1px solid darken($gris, 10);
+  margin-top: 1rem;
+  padding-top: 2rem;
+  .contenedor-footer{
+    display: flex;
+    flex-direction: column;
+    @include telefono(){
+      flex-direction: row;
+    }
+  }
+}
+.menu{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  flex: 1;
+  @include desktop(){
+    flex: 0 1 calc(30% - 1rem);
+  }
+  a{
+    color: $negro;
+    margin-bottom: 0.5rem;
+    text-decoration: none;
+  }
+}
